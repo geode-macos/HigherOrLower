@@ -1,0 +1,19 @@
+{
+	"geode": "4.4.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "ungeil.higher_or_lower",
+	"name": "Higher or Lower",
+	"version": "v1.0.0",
+	"developer": "Ungeil",
+	"description": "",
+    	"resources": {
+        	"sprites": [
+            	"resources/*.png"
+        	]
+    	}
+}
