@@ -55,7 +55,9 @@ namespace HighLow
 	{
 		if (g_data.levels.size() <= 0) return;
 		g_data.level1 = g_data.level2;
-		g_data.level2 = g_data.levels.at(rand() % g_data.levels.size());
+		std::vector<Ref<GJGameLevel>> lvlsNoL1;
+		for (Ref<GJGameLevel> l : g_data.levels) if (strcmp(l->m_levelName.c_str(), g_data.level1->m_levelName.c_str()) != 0) lvlsNoL1.push_back(l);
+		g_data.level2 = lvlsNoL1.at(rand() % lvlsNoL1.size());
 	}
 
 	void reset()
