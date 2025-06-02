@@ -30,7 +30,10 @@ class $modify(CustomLevelBrowserLayer, LevelBrowserLayer) {
 		if (HighLow::getIsHLMenu())
 		{
 			CCLabelBMFont* title = (CCLabelBMFont*)this->getChildByID("GJListLayer")->getChildByID("title");
-			auto text = std::format("Score: {}", HighLow::getScore());
+			std::stringstream ss;
+			ss << "Score: " << HighLow::getScore();
+			auto text = ss.str();
+			//auto text = std::format("Score: {}", HighLow::getScore());
 			if (title != NULL) title->setString(text.c_str());
 		}
 	}
@@ -52,8 +55,11 @@ class $modify(CustomLevelBrowserLayer, LevelBrowserLayer) {
 		else 
 		{
 			LevelBrowserLayer::loadLevelsFinished(arr, p1, p2);
-			CCLabelBMFont* title = (CCLabelBMFont*)this->getChildByID("GJListLayer")->getChildByID("title");			
-			auto text = std::format("Score: {}", HighLow::getScore());
+			CCLabelBMFont* title = (CCLabelBMFont*)this->getChildByID("GJListLayer")->getChildByID("title");	
+			std::stringstream ss;
+			ss << "Score: " << HighLow::getScore();
+			auto text = ss.str();
+			//auto text = std::format("Score: {}", HighLow::getScore());
 			if (title != NULL) title->setString(text.c_str());
 		}
 	}
@@ -61,7 +67,10 @@ class $modify(CustomLevelBrowserLayer, LevelBrowserLayer) {
 	void onRefresh(CCObject* p0) 
 	{
 		CCLabelBMFont* title = (CCLabelBMFont*)this->getChildByID("GJListLayer")->getChildByID("title");
-		auto text = std::format("Score: {}", HighLow::getScore());
+		std::stringstream ss;
+		ss << "Score: " << HighLow::getScore();
+		auto text = ss.str();
+		//auto text = std::format("Score: {}", HighLow::getScore());
 		if (title != NULL) title->setString(text.c_str());
 
 		LevelBrowserLayer::onRefresh(p0);
