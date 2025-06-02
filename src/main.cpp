@@ -1,5 +1,5 @@
 #include <Geode/Geode.hpp>
-#include "utils/Serverutils.hpp"
+#include "utils/ServerUtils.hpp"
 #include "HighLow.hpp"
 using namespace geode::prelude;
 

@@ -1,5 +1,5 @@
 #include "ServerUtils.hpp"
-#include "../utils.hpp"
+#include "../Utils.hpp"
 
 //Stolen from Cvolton <3
 using namespace geode::prelude;
